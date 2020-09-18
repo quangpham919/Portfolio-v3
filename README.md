@@ -9,14 +9,14 @@
 
   <p align="center">
     This is the third iteration of my portfolio. 
-    <br />
+  <br />
 <!--     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br /> -->
 <!--     <a href="https://github.com/github_username/repo_name">View Demo</a> -->
-    ·
+    
 <!--     <a href="https://github.com/github_username/repo_name/issues">Report Bug</a> -->
-    ·
+    
 <!--     <a href="https://github.com/github_username/repo_name/issues">Request Feature</a> -->
   </p>
 </p>
@@ -59,4 +59,8 @@ npm install
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+## Author
+
+[Quang Pham](https://github.com/quangpham919)
 
