@@ -6,10 +6,6 @@
   </a>
 
   <h3 align="center">Quang's Porfolio</h3>
-
-  <p align="center">
-    This is the third iteration of my portfolio. 
-  <br />
 <!--     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br /> -->
@@ -23,7 +19,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+This is the third iteration of my portfolio. 
 
 ### Built With
 
