@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/quangpham919/Porfolio-v3">
-    <img src="src/images/logo.svg" alt="Logo" width="80" height="80">
+    <img src="./static/logo.svg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Quang's Porfolio</h3>
