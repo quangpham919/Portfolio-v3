@@ -2,7 +2,7 @@ import React from "react"
 import responsive from "../../static/a.gif"
 import { AnchorLink} from "gatsby-plugin-anchor-links"
 import {Link} from "gatsby"
-
+import Resume from "../../static/Quang_Resume.pdf"
 const Banner = () =>{
 
 return (
@@ -15,14 +15,10 @@ return (
                 <h1> A Junior  <br></br>   Software Developer.  <br></br> </h1> 
                 <p><i> I build things for WWW. </i> </p> 
                 <div className="button"> 
-                <Link to="" >  View Resume </Link>
+                <a href={Resume}>  View Resume </a>
                 <Link to="contact" >  Get in touch </Link> 
                 </div>
-                </div>
-                <div className="main-image">
-                    <img src={responsive} alt="banner"/> 
-                    
-                </div> 
+
                 <div className="link"> 
                 <AnchorLink to="/#about" title="about">
                     <div className="box">
@@ -33,6 +29,14 @@ return (
                     </div>
                 </AnchorLink> 
                 </div>
+
+                </div>
+
+                <div className="main-image">
+                    <img src={responsive} alt="banner"/> 
+                    
+                </div> 
+                
             </div>
            
       </div>

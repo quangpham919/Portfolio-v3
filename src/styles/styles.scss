@@ -30,29 +30,37 @@ body {
   background-color: $platinum;
   margin: 0;
   padding: 0;
-  
-  
-  
+
+}
+
+section{
+  width: 100%;
+  min-height:100vh;
 }
 
 //Header style
 header {
     background-color: $white;
+    height:60px;
+    top:0;
+    width: 100%;
+    z-index: 11;
+    position: fixed;
+    border-radius: 0px 0px 10px 10px;
+    nav{ 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    position: fixed;
-    z-index: 10;
     .logo{
-      margin-left: 1.5rem;
-      a{ font-weight: 700;
+      
+     
+      a{ 
+        font-weight: 700;
         text-decoration: none;
         color: $black;
         letter-spacing: 1.5px; 
         img{
-          width: 100px;
-          height:100px;
+          width:100px;
           object-fit: fill;
         } 
       } 
@@ -60,8 +68,7 @@ header {
     }
 
     .navigation{    
-      align-items: flex-end;
-      nav{ 
+      justify-content: flex-end;
         a{
           margin: 0 20px;
           text-decoration: none;
@@ -96,11 +103,10 @@ header {
         // layout
       display: grid;
       grid-template-columns: 3fr 2fr;
-      grid-template-rows: 3em 33em 20px;
+      grid-template-rows:  100vh ;
       grid-template-areas: 
-            'left-column right-column '
-            'left-column right-column '
-            'scroll-down scroll-down';
+            'left-column right-column ' ;
+            
       gap:0.5em;
 
       // font, size, color ,etc...
@@ -112,6 +118,7 @@ header {
 
 
       .main-text{ 
+
         grid-area:left-column;
         display: flex;
         flex-direction: column;
@@ -157,47 +164,47 @@ header {
           } 
         }
         
-        
     }
-    
     .main-image{
           grid-area:right-column;
           margin: 0 auto;
+          padding-top: 1em;
           img{
-            width: 500px;
-            height: 500px;
+            width: 600px;
+            height: 600px;
             object-fit: cover;
           }
         
     }
-    // create scroll-down animation
-    .link{ 
-      grid-area: scroll-down;
-      display: flex;
-      justify-content: center;
-      
-    .box{
-      width: 20px;
-      height: 20px;
-      span{
+     // create scroll-down animation
+     .link{ 
+      display:flex;
+      justify-content: flex-end;
+      margin-right:4em;
+      margin-top:4em;
+      .box{
         width: 20px;
         height: 20px;
-        display: block;
-        border-right: 2px solid $black;
-        border-bottom: 2px solid $black;
-        transform: rotate(45deg);
-        margin:-10px;
-        animation: animate 2s infinite;
-      }
-      span:nth-child(2){
-        animation-delay: -0.2s;
-      }
-      span:nth-child(3){
-        animation-delay: -0.4s;
-      }
-      
-    }  
+        span{
+          width: 20px;
+          height: 20px;
+          display: block;
+          border-right: 2px solid $black;
+          border-bottom: 2px solid $black;
+          transform: rotate(45deg);
+          margin:-10px;
+          animation: animate 2s infinite;
+        }
+        span:nth-child(2){
+          animation-delay: -0.2s;
+        }
+        span:nth-child(3){
+          animation-delay: -0.4s;
+        }
+        
+      }  
     }
+  
         
   }
   
@@ -205,111 +212,86 @@ header {
   
 }
 
-@media screen and (max-width:1200px){
-
-  .banner{
-    .greeting-area{
-      .main-text{
-         h1{
-           font-size: 2rem;
-         }
-         .button{
-          
-          a{
-            font-size: 0.5rem;
-          }
-         }
-      }
-    }
-  }
-}
 
 // style for about me section
 
 .about{
-  display: flex;
-  flex-direction: column;
+  border-radius: 10px;
+  background-color: $white;
   .aboutMe-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    grid-gap:50px;
+    
+    h4{
+      color:$orange;
+    }
+
     .mainText{
-     
-      margin-left: 3rem;
+      
       color: $black;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      display: flex;
-      flex-direction: column;
-      h2{
-        color: $mainBlue;
-      }
-      h3{
-        font-weight: 500;
-        line-height: 1.5rem;
-        font-size: 0.75rem
-      }
+      line-height: 1em;
       p{
-        line-height: 1.25rem;
         font-weight: normal;
-        font-size: 0.75rem;
-        line-height: 30px;
-        letter-spacing: 0.02em;
+        font-size: 0.75em;
+        font-weight: 500;
+        letter-spacing: 0.025em;
       }
     }
     .myImage{
-      width: 70%;
-      box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.3);
-      border-radius: 10px;
-      height: fit-content;
-       img{
-        border-radius: 10px;
-         width: 100%;
-         height: 100%;
+      display: grid;
+      align-items: center;
+      text-align: center;
+      margin:0 auto;
+     
+      .image-wrapper{
+       
+      }
+      Img{
+        width:300px;
+        height:350px;
+        object-fit: cover;
+         -webkit-box-shadow: -13px -13px 4px -1px rgba(0,0,0,0.33);
+-moz-box-shadow: -13px -13px 4px -1px rgba(0,0,0,0.33);
+box-shadow: -13px -13px 4px -1px rgba(0,0,0,0.33); 
+       }
+       .social-link{
+         display: flex;
+         justify-content: space-evenly;
+         font-size: 22px;
+         a{
+          text-decoration: none;
+          color:#466EC3;
+          transition: 0.2s;
+          img{
+            width: 36px;
+            height: 36px;
+          }
+          &:hover{
+            color:#7492D2;
+          }
+         }
+        
        }
     }
   }
-  //styling for skillBox
+
   .mySkill{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    text-align: center;
-    transition: all 0.2ms;
-    .skill-container{ 
-      width:30%;
-      height: auto fit-content;
-      border: 0.001em solid $orange;
-      background-color: $white;
-      border-radius: 10px;
-    .inner-skill-box{
-    //style content inside skill box
-      .image{
-        font-size: 1em;
-        color: $mainBlue;
-        line-height: 3em;
-      }
-      .title{
-          h4{
-            font-weight: 700;
-            color: $mainBlue;
-            font-size: 1em;
-          }
-      }
-      .skill{
-        ul{
-          list-style-type: none;
-          font-size: 0.8em;
-          li{
-            color: $black;
-          }
-          .heart{
-            color: $platinum;
-            font-size: 0.8em;
-          }
+    .skills{
+      display:flex;
+      justify-content: space-evenly;
+      background-color: $platinum;
+      margin-bottom: 10px;
+      border-radius:10px;
+      ul{
+        margin : 0 auto;
+        list-style: none;
+        li{
+           font-size: 0.8em;
+           font-weight: 500;
         }
       }
     }
-  }
 
   }
 }
@@ -319,13 +301,11 @@ header {
   display: flex;
   text-align: center;
   flex-direction: column;
-  
   .work-header{
-      h1{
-        color: $mainBlue;
-        font-weight: 700;
-        letter-spacing: 0.025em;
-        
+      h3{
+        color:$black;
+        font-weight: 750;
+        letter-spacing: 0.05em;
       }
       p{
         color: $black;
@@ -334,58 +314,51 @@ header {
         font-size:1rem;
       }
   } 
+
   .work-container{
     display: grid;
-    grid-template-columns: repeat(3,350px);
-    grid-template-rows: repeat(2,450px);
-    column-gap: 20px;
-    row-gap: 20px;
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap:20px;
+    justify-content: center;
     .workbox-inner-container{
-      display: grid;
-      grid-template-rows: 100px 1fr 50px;
-      grid-template-areas: 
-      "hd"
-      "main"
-      "ft";
-      text-align: center;
-      border: 0.07em solid $orange;
-      border-radius: 10px;
+      background-color: $white;
+      -webkit-box-shadow: -2px -2px 16px 1px rgba(0,0,0,0.46);
+      -moz-box-shadow: -2px -2px 16px 1px rgba(0,0,0,0.46);
+      box-shadow: -2px -2px 16px 1px rgba(0,0,0,0.46);
+      border: 1px solid $orange;
       transition: all 0.3s;
+      //hover changes
       &:hover{
-        background-color: $black;
-        .title{
-          color:$mainBlue
-        }
-        .mainText{
+        background-color: $mainBlue;
+        .post{
           color: $white;
         }
         .buttonGroup{
           .button{
-            a{ color:$white;
-              border: 0.16em solid $white;
+            a{ color:$orange;
+              border: 0.16em solid $orange;
             }
           }
          }
        
       }
-      .title{
-        color: $mainBlue;
-        grid-area:hd;
-        padding-top: 10%;
+
+      .thumbnail{ 
+        width: 100%;
+        
       }
-      .mainText{
-        grid-area:main;
-        text-align: center;
-        grid-area:main;
-        padding:10px 0 10px 0;
-        font-size: 1rem;
-        letter-spacing: 0.025rem;
+      .post{
+        font-size: 0.8em;
+        padding : 20px;
+        
       }
+    
+      
       .buttonGroup{ 
         display:flex;
         justify-content:center ;
         .button{
-          grid-area:ft;
+          padding: 5px;
           a{
             text-decoration: none;
             text-transform: capitalize;
@@ -398,8 +371,8 @@ header {
             text-align:center;
             transition: all 0.2s;
             &:hover{
-              border: 0.16em solid  $mainBlue;
-              color: $mainBlue;
+              border: 0.16em solid  #FEC872;
+              color: #FEC872;
             }
            
           }
@@ -410,6 +383,9 @@ header {
   }
   
 }
+
+
+
 .footer-container{
   margin-top: 10rem;
   display:flex;
@@ -515,185 +491,4 @@ header {
   }
 }
 
-@media screen and (min-width:801px) and ( max-width:1100px){
-    .banner{
-      .row{
-        flex-direction: column-reverse;
-        .main-text{
-          margin-top:2rem;
-          margin-left:1.5rem;
-          h1{
-            font-size: 3.5rem;
-          }
-          h3{
-            font-size:1.5rem;
-          }
-          p{
-            font-size:1rem;
-          }
-        }
-        .main-image{
-          width:60%;
 
-        }
-      }
-    }
-  
-  .work {
-    .work-container {
-      justify-content: center;
-      grid-template-columns: repeat(2, 450px);
-      grid-template-rows: repeat(2, 400px);
-      
-    }
-    
-  } 
-}
-
-// @media screen and (max-width:801px){
-//   .about{
-//     .aboutMe-container{
-//       .mainText{
-//           p{
-//             font-size:0.5rem;
-//           }
-//           .mySkill{
-//             .skill-container{
-//               width: 40%;
-//               .inner-skill-box{
-
-//                 .skill{
-//                     font-size: 0.5rem;
-//                 }
-//                 .title{
-//                     font-size: 0.5rem;
-
-//                 }
-//               }
-//             }
-            
-//           }
-//       }
-//       .myImage{
-//         width:150%;
-        
-//       }
-
-//     }
-//   }
-
-//   .work{
-//     margin-top:3rem;
-//   }
-
-//   .contact-section{
-//     .contact{
-//       .form-container{
-//         button{
-//           padding: 5px 10px;
-//         }
-//       }
-//     }
-//   }
-
-  
-// }
-
-// @media screen and (min-width:700px){
-//   .banner{
-//     .row{
-//       display: flex;
-//       flex-direction: column-reverse;
-//     .main-text {
-//         margin-left: 3rem;
-//         font-size: 0.5rem;
-//         line-height: 1rem;
-//         h1{
-//           font-size: 3rem;
-//         }
-//         h3{ 
-//           font-size:1.5rem;
-//         }
-//         p{
-//           font-size:1rem;
-//         }
-//     }
-//     .main-image{
-//       width: 60%;
-//       height: auto;
-//       margin: 0 auto;
-//       padding-left: 0;
-//     }
-//   }
-//   }
-
-//   .about{
-//     .aboutMe-container{
-//       flex-direction: column;
-//       .myImage{
-//         width: 30%;
-//         height: auto;
-//         margin-left: 3rem;
-//       }
-
-//       .mainText{
-//         margin-top:5%;
-//         h3 {
-//           font-size: 1rem;
-//         }
-//         p{
-//           font-size: 0.8rem;
-//         }
-//       }
-    
-//     }
-    
-//   }
-//   .work{
-//     margin-top: 40rem;
-//     .work-container{
-//       grid-template-columns: 350px;
-//       justify-content: center;
-//     }
-//   }
-
-//   .contact-section{
-//     .contact{
-//       .form-container{
-//         button{
-//           padding: 5px 5px;
-//         }
-//       }
-//     }
-//   }
-// }
-// @media screen and (min-width: 500px) and (max-width:700px){
-//   .about{
-//     .aboutMe-container{
-//         .myImage{
-          
-//         }
-//     }
-//   }
-
-// }
-
-// @media screen and (max-width:420px){
-//   .contact-section{
-//     padding:0% 0%;
-    
-//     .contact{
-//       padding:0% 0%;
-//       .form-container{
-//         input, textarea{
-//           width: 100%;
-//           padding:0% 0%;
-//         }
-//         button{
-//           width:100%;
-//           padding:0px 0px;
-//         }
-//       }
-//     }
-//   }
-// }
