@@ -16,6 +16,7 @@
 <!--     <a href="https://github.com/github_username/repo_name/issues">Request Feature</a> -->
   </p>
 </p>
+<<<<<<< HEAD
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -67,3 +68,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Author
 
 [Quang Pham](https://github.com/quangpham919)
+
