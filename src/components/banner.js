@@ -16,7 +16,7 @@ return (
                 <p><i> I build things for WWW. </i> </p> 
                 <div className="button"> 
                 <a href={Resume}>  View Resume </a>
-                <Link to="contact" >  Get in touch </Link> 
+                <AnchorLink to="/#footer" >  Get in touch </AnchorLink> 
                 </div>
 
                 <div className="link"> 

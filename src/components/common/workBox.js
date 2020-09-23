@@ -10,7 +10,7 @@ const WorkBox = ({props}) =>{
           <Img fluid={featuredImage.childImageSharp.fluid} objectFit="cover" display="block" alt="project-thumbnail"/>
           <div className="post">
             <h3> {title} </h3>
-            {<div dangerouslySetInnerHTML={{__html: html}}></div>}
+            {<div className="text" dangerouslySetInnerHTML={{__html: html}}></div>}
             <div className="buttonGroup"> 
           <div className="button button-visit">
             { site ? <a href={site} rel="noopener noreferrer"> Visit Page  </a> : null } 

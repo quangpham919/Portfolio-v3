@@ -9,13 +9,10 @@ const MainPage = () => {
 
     return (
     <>
-    
     <section className="header-point" id="banner"> <Banner/> </section>
-    
     <section id="about"> <About/>  </section>  
     <section id="work"> <Work />   </section> 
-        
-    {/* <section id="work"> <Work /> <Footer />   </section> */}
+    <footer id="footer"> <Footer />   </footer> 
     </>
     )
 }

@@ -1,6 +1,4 @@
 import React from "react"
-import {useStaticQuery, graphql} from "gatsby"
-import Img from "gatsby-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faGithub, faLinkedinIn, faFacebook  } from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -18,10 +16,10 @@ const About = () =>{
     
     <h4>Find me on:</h4>
     <div className="social-link">
-      <a href="#"><FontAwesomeIcon icon={faGithub} /> </a>
-      <a href="#"><FontAwesomeIcon icon={faLinkedinIn} /> </a>
-      <a href="#"><FontAwesomeIcon icon={faFacebook} /> </a>
-      <a href="#"><FontAwesomeIcon icon={faEnvelope} /> </a>
+      <a href="https://github.com/quangpham919" rel="noopener noreferrer" ><FontAwesomeIcon icon={faGithub} /> </a>
+      <a href="https://www.linkedin.com/in/pham-quang-723430141" rel="noopener noreferrer"  ><FontAwesomeIcon icon={faLinkedinIn} /> </a>
+      <a href="https://www.facebook.com/nhat.quang.503/" rel="noopener noreferrer"  ><FontAwesomeIcon icon={faFacebook} /> </a>
+      <a href="mailto:quangpham9199@gmail.com"><FontAwesomeIcon icon={faEnvelope} /> </a>
     </div>
     </div>
     

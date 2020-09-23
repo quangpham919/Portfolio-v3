@@ -47,6 +47,9 @@ header {
     z-index: 11;
     position: fixed;
     border-radius: 0px 0px 10px 10px;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    
     nav{ 
     display: flex;
     align-items: center;
@@ -90,6 +93,12 @@ header {
       }
     }
   
+}
+.shadow{
+    
+    -webkit-box-shadow: 1px 8px 19px 1px rgba(0,0,0,0.46);
+    -moz-box-shadow: 1px 8px 19px 1px rgba(0,0,0,0.46);
+    box-shadow: 1px 8px 19px 1px rgba(0,0,0,0.46);
 }
 
 //banner style
@@ -348,9 +357,8 @@ box-shadow: -13px -13px 4px -1px rgba(0,0,0,0.33);
         
       }
       .post{
-        font-size: 0.8em;
+        font-size: 0.85em;
         padding : 20px;
-        
       }
     
       
@@ -387,108 +395,93 @@ box-shadow: -13px -13px 4px -1px rgba(0,0,0,0.33);
 
 
 .footer-container{
-  margin-top: 10rem;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  h1{
+  background-color: $white;
+  border-radius: 10px;
+  h2{
     color:$mainBlue;
     letter-spacing: 0.025rem;
+    text-align: center;
+    margin-top: 1em;
+    padding-top: 1  em;
+  }
+
+  .author{
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 0;
+  }
+
+  .form-wrapper{
+    .contact-form{
+      display:block;
+      max-width: 600px;
+      margin: 0 auto;
+      border: 1px solid $mainBlue;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: $platinum;
+      
+      label{
+        color:$mainBlue;
+        font-weight: 700;
+        line-height: 2em;
+        
+      }
+      .input-field{
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        border: 1px solid $mainBlue;
+        font-size: 0.8em;
+        font-weight: normal;
+      }
+      textarea{
+        min-height: 100px;
+      }
+      .submit-btn{
+        margin-top: 10px;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: $black;
+        background-color: $orange;
+        border: none;
+        font-weight: 700;
+        &:hover{
+          box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12); 
+          background-color: #F29602;
+        }
+      }
+    }
   }
   .button-container {
     margin-top: 3rem;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+    text-align: center;
     a{ 
-      transition: all 0.2ms;
-    .button{ 
-     padding:0.5em 0.3em;
-     border: 0.08em solid $black;
-     width:50px;
-     height:50px;
-     border-radius: 50%;
-     font-size :1rem;
-     font-weight: normal;
-     color:$black; 
-     
-      &:hover{
-        border: 0.1em solid $mainBlue;
-        color:$mainBlue
-      }
-      } 
-    }
-  }
-  p{
-    margin-top:3rem;
-    font-size: 0.8rem;
-    font-weight: 300;
-    font-style: italic;
-
-  }
-}
-.contact-section{
-  width:100%;
-  height: 100%;
-  padding: 0 10rem;
-}
-.contact{ 
-  padding:0 10%;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  font-weight:1rem;
-  .content-wrapper {
-    width:100%;
-    height:100%;
-    display: flex;
-    flex-direction: column;
-    
-    h2{
-      text-align:center;
-      color:$mainBlue;
+     transition: all 0.2ms;
+      .button{ 
+      padding:0.5em 0.3em;
+      border: 0.08em solid $mainBlue;
+      width:50px;
+      height:50px;
+      border-radius: 50%;
+      font-size :1rem;
+      font-weight: normal;
+      color:$mainBlue; 
       
-    }
-    p{
-      font-size:0.8rem;
-      color:$black;
-    }
-
-   }
-   .form-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    label{
-      color:$mainBlue;
-    }
-    input, textarea{
-      width: 100%;
-      padding:8px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      margin-top:6px;
-      margin-bottom: 16px;
-      resize: vertical;
-     
-    }
-    button{
-      width: 20%;
-      justify-self: center;
-      text-align: center;
-      border-radius: 4px;
-      padding: 5px 20px;
-      border:none;
-      background-color: $mainBlue;
-      cursor: pointer;
-      &:hover{
-        background-color: $orange;
-      }
+        &:hover{
+          border: 0.1em solid $mainBlue;
+          color: $mainBlue;
+        }
+        } 
     }
   }
+  
 }
-
 
