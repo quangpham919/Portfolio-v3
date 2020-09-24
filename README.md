@@ -3,7 +3,9 @@
 <p align="center">
   <a href="https://quangpham.netlify.com">
     <img src="./static/logo.svg" alt="Logo" width="80" height="80">
+    [![Netlify Status](https://api.netlify.com/api/v1/badges/1d3f09e2-8139-4641-b8e9-ba1ea9791d7e/deploy-status)](https://app.netlify.com/sites/quangpham/deploys)
   </a>
+  
 
   <h3 align="center">Quang's Porfolio</h3>
 <!--     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
