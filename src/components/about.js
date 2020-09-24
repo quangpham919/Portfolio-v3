@@ -16,15 +16,12 @@ const About = () =>{
     <div className="image-wrapper" 
       data-sal="zoom-in" 
       data-sal-easing="ease"
-      data-sal-delay="300" > 
+      data-sal-delay="100" > 
         <img src={myPic} alt="my-profile" />  
     </div>
     
     <h4>Find me on:</h4>
-    <div className="social-link"
-    data-sal="slide-up"
-    data-sal-easing="ease"
-    data-sal-delay="300">
+    <div className="social-link">
       <a href="https://github.com/quangpham919" rel="noopener noreferrer" ><FontAwesomeIcon icon={faGithub} /> </a>
       <a href="https://www.linkedin.com/in/pham-quang-723430141" rel="noopener noreferrer"  ><FontAwesomeIcon icon={faLinkedinIn} /> </a>
       <a href="https://www.facebook.com/nhat.quang.503/" rel="noopener noreferrer"  ><FontAwesomeIcon icon={faFacebook} /> </a>
@@ -35,7 +32,7 @@ const About = () =>{
     <div className="mainText" 
      data-sal="slide-left"
     data-sal-easing="ease"
-    data-sal-delay="300"
+    data-sal-delay="100"
     >
         <h4>MORE ABOUT ME</h4> 
         <p> I'm a junior software developer based in Toronto, ON, who have passion in web development.</p>

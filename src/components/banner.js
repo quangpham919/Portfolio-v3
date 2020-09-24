@@ -15,7 +15,7 @@ return (
                 <div 
                 className="main-text" 
                 data-sal="slide-right"
-                data-sal-delay="0.2"
+                data-sal-delay="100"
                 data-sal-easing="ease-in"
                 >
                 <h1> <span className="hello-wrapper">Hello,  my name's</span> <br></br> <span className="name"> Quang Pham.</span> </h1>       
@@ -40,7 +40,7 @@ return (
 
                 <div className="main-image"
                 data-sal="zoom-in"
-                data-sal-delay="0.2"
+                data-sal-delay="100"
                 data-sal-easing="ease-in"
                 >
                     <img src={responsive} alt="banner"/> 
