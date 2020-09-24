@@ -1,7 +1,7 @@
 ---
 date : "2020-04-01"
 title: "Ontario House Analyst"
-featuredImage : "./images/chatApp.jpeg"
+featuredImage : "./images/dataAnalytics.png"
 github: "https://github.com/quangpham919/ontario-house-price-analysing"
 site : "" 
 tags : 

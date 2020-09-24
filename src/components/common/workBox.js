@@ -7,7 +7,7 @@ const WorkBox = ({props}) =>{
   const {html} = props.node; 
     return ( 
       <div className="workbox-inner-container"> 
-          <Img fluid={featuredImage.childImageSharp.fluid} objectFit="cover" display="block" alt="project-thumbnail"/>
+          <Img className="thumbnail" fluid={featuredImage.childImageSharp.fluid} objectFit="cover" display="block" alt="project-thumbnail"/>
           <div className="post">
             <h3> {title} </h3>
             {<div className="text" dangerouslySetInnerHTML={{__html: html}}></div>}

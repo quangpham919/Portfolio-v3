@@ -30,7 +30,7 @@ body {
   background-color: $platinum;
   margin: 0;
   padding: 0;
-
+  overflow-x: hidden;
 }
 
 section{
@@ -44,19 +44,16 @@ header {
     height:60px;
     top:0;
     width: 100%;
-    z-index: 11;
     position: fixed;
     border-radius: 0px 0px 10px 10px;
     transform: translateY(0);
-    transition: transform 0.3s ease;
-    
+    transition: transform 200ms ease; 
+    z-index: 2;
     nav{ 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .logo{
-      
-     
+    .logo-wrapper{
       a{ 
         font-weight: 700;
         text-decoration: none;
@@ -69,33 +66,21 @@ header {
       } 
       
     }
-
-    .navigation{    
-      justify-content: flex-end;
-        a{
-          margin: 0 20px;
-          text-decoration: none;
-          letter-spacing: 1.25px;
-          text-transform: capitalize;
-          font-weight: 700;
-          font-size:1rem;
-          color:#A3A3A3; 
-          
-          &:last-child {
-            margin-right:2rem;
-          }
-          
-          &:hover{
-            color:$black;
-          }
-        }
-       
-      }
-    }
+}
   
 }
+
+@media screen and (max-width:768px){
+  header{
+    nav{
+      .navigation{
+        display: none;
+      }
+    }
+  }
+}
+
 .shadow{
-    
     -webkit-box-shadow: 1px 8px 19px 1px rgba(0,0,0,0.46);
     -moz-box-shadow: 1px 8px 19px 1px rgba(0,0,0,0.46);
     box-shadow: 1px 8px 19px 1px rgba(0,0,0,0.46);
@@ -103,7 +88,7 @@ header {
 
 //banner style
 .banner {
-  width: 100%;
+  
   margin: 0 auto;
   background-color: $white;
   margin-top: 0.5em;
@@ -114,9 +99,8 @@ header {
       grid-template-columns: 3fr 2fr;
       grid-template-rows:  100vh ;
       grid-template-areas: 
-            'left-column right-column ' ;
-            
-      gap:0.5em;
+             'left-column right-column ' ;
+      grid-gap:0.5em;
 
       // font, size, color ,etc...
       color: $black;
@@ -172,7 +156,6 @@ header {
             }
           } 
         }
-        
     }
     .main-image{
           grid-area:right-column;
@@ -213,17 +196,39 @@ header {
         
       }  
     }
-  
-        
   }
-  
-    
-  
+
 }
 
+@media screen and (max-width:768px) {
+  .banner{
+  .greeting-area{
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+    grid-template-areas: 
+            'right-column ' 
+            'left-column ' ;
+  
+    .main-text{
+      padding-left: 5em;
+    }
+    .link{
+      justify-content: center;
+    }
+    .main-image{
+      img{
+        width: 400px;
+        height: 400px;
+      }
+    }
+  }
+
+  }
+  
+ 
+}
 
 // style for about me section
-
 .about{
   border-radius: 10px;
   background-color: $white;
@@ -252,17 +257,14 @@ header {
       align-items: center;
       text-align: center;
       margin:0 auto;
-     
-      .image-wrapper{
-       
-      }
+      
       Img{
         width:300px;
         height:350px;
         object-fit: cover;
-         -webkit-box-shadow: -13px -13px 4px -1px rgba(0,0,0,0.33);
--moz-box-shadow: -13px -13px 4px -1px rgba(0,0,0,0.33);
-box-shadow: -13px -13px 4px -1px rgba(0,0,0,0.33); 
+        -webkit-box-shadow: -13px -13px 4px -1px rgba(0,0,0,0.33);
+        -moz-box-shadow: -13px -13px 4px -1px rgba(0,0,0,0.33);
+        box-shadow: -13px -13px 4px -1px rgba(0,0,0,0.33); 
        }
        .social-link{
          display: flex;
@@ -354,7 +356,7 @@ box-shadow: -13px -13px 4px -1px rgba(0,0,0,0.33);
 
       .thumbnail{ 
         width: 100%;
-        
+        height: 200px;
       }
       .post{
         font-size: 0.85em;

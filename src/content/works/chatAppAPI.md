@@ -1,7 +1,7 @@
 ---
 date : "2020-07-21"
 title: "Rest API for Chat Application"
-featuredImage : "./images/chatApp.jpeg"
+featuredImage : "./images/serverAPI.png"
 github: "https://github.com/quangpham919/Chat-application-api"
 site : "https://quang-api-chat.herokuapp.com/" 
 tags : 

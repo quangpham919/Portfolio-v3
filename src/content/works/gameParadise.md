@@ -1,7 +1,7 @@
 ---
 date : "2019-12-03"
 title: "Game Paradise"
-featuredImage : "./images/chatApp.jpeg"
+featuredImage : "./images/gameParadise.png"
 github: "https://github.com/quangpham919/Full_Stack_Project" 
 site : "http://mean-project-plus84.herokuapp.com" 
 tags : 
