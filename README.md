@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/quangpham919/Porfolio-v3">
+  <a href="https://quangpham.netlify.com">
     <img src="./static/logo.svg" alt="Logo" width="80" height="80">
   </a>
 
